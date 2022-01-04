@@ -33,6 +33,7 @@ El dataset se compone de 4 ficheros, de los cuales, únicamente emplearemos trai
 * Sample_submision.csv: ejemplo de referencia de una regresión lineal por año y mes de venta, superficie y número de dormitorios.
 
 ## Atributos
+
 * MSSubClass: identifica el tipo de vivienda involucrada en la venta.
 * MSZoning: identifica la clasificación general de zona
 * LoteFrontage: pies lineales de calle conectados a la propiedad.
@@ -121,6 +122,7 @@ En primer objetivo es realizar un estudio descriptivo para obtener un resumen de
 Tras ello, se construirá un modelo de regresión múltiple que permita determinar el precio de la vivienda, a partir de los atributos seleccionados.
 
 Finalmente, nos planteamos las siguientes preguntas a responder:
+
 * ¿Cuál es el precio de la propiedad en función de las variables OverallQual, OverallCond, LotArea, Yearbuilt?
 * ¿Se puede asumir que las casas del barrio CollgCr tienen un mayor lote de área que las de BrkSide?
 * ¿La varianza del precio de venta es diferente de 70442^2?
@@ -681,6 +683,7 @@ Dado un lote con área de 8650, condición general de 6, calidad general de 5 y 
 
 # Resolución del problema
 Tras la realización de la práctica podemos obtener distintas conclusiones.
+
 En primer lugar, después de realizar una inspección visual de las variables, así como, tras aplicar el test estadístico, se ha obtenido un “p-value” inferior a 0.05, por lo que se puede afirmar que todas las variables consideradas siguen una distribución normal. Así mismo, tras generar los grupos de datos que se analizarán bajo contraste de hipótesis y aplicar el f-test, se ha obtenido un valor de “p value” superior a 0.05, concluyendo que la diferencia de las varianzas no es significativa, cumpliendo así, el criterio de homocedasticidad.
 
 Hemos querido conocer si las casas del barrio CollgCr tienen un mayor lote de área que las de BrkSide. Para ello, se ha utilizado contraste de hipótesis de dos muestras independientes con varianzas desconocidas.  Tras ejecutar el contraste unilateral por la derecha ("greater") se ha obtenido un valor medio de LotArea de la población se encuentra en los rangos 1632.138 e infinito con un 95% de certeza. Y con un “p-value” inferior a 0.05 se concluye que las casas del barrio CollgCr tienen una mayor área de lote que las casas del barrio BrkSide (H1).
@@ -689,7 +692,7 @@ También se ha varianza del precio de venta es diferente de 70442^2. Para ello, 
 
 Se ha empleado Pearson para la correlación de variables lineales y numéricas y chi-cuadrado para las variables categóricas. Se han obtenido los siguientes resultados de las variables lineales y numéricas, respecto al precio de venta:
 
-| Variable  | Grado de correlación con el precio de venta | Interpretacion |
+| Variable | Grado de correlación con el precio de venta | Interpretacion |
 | -- | -- | -- | -- |
 | LotArea | 0.3999 | Grado de correlacion bajo, no parece existir una relación importante entre estas dos variables |
 | OverralCond | 0.0008 | Grado de correlacion muy bajo, no parece existir una relación importante entre estas dos variables |
@@ -697,6 +700,7 @@ Se ha empleado Pearson para la correlación de variables lineales y numéricas y
 | Yearbuilt | 0.5844 | Grado de correlación medio, parece existir una relación entre el precio de venta y el año de construcción (influencia positiva |
 
 Respecto a las variables categóricas se han obtenido los siguientes resultados, a partir de la tabla de contingencia generada:
+
 * Cuando las condiciones son malas, el 93.18% de las casas en venta tienen un precio bajo.
 * Cuando las condiciones son malas, el 5.68% de las casas en venta tienen un precio medio.
 * Cuando las condiciones son malas, el 1.13% de las casas en venta tienen un precio alto.
@@ -725,6 +729,13 @@ Además, examinar el modelo de regresión se obtiene que el coeficiente R2 arroj
 
 # Código
 https://github.com/andresf-ardilar/M2.851_20211_PRA2
+
+# Contribuciones
+| Contribuciones  | Firma |
+| -- | -- |
+| Investigación previa | A.O.H. |
+| Redacción de las respuestas | A.O.H. |
+| Desarrollo código | A.O.H. |
 
 # Anexos
 ![tipología de los datos](assets/a1.png)
